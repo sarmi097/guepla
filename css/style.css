@@ -1,0 +1,99 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap);
+
+
+.btn-guepsite2 {
+    width: 150px;
+    height: 55px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #f1bf33;
+    border-radius:50px;
+    transition: ease-out 0.4s;
+    outline: none;
+    border: solid 3.2px #f1bf33;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-guepsite2:hover {
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 2px;
+    border: none;
+}
+
+.btn-guepsite2::before {
+    border-radius: 2px;
+    transition: 0.6s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background: linear-gradient(to right, #f1bf33, #d19b06);
+}
+
+.btn-guepsite2:hover::before {
+    border-radius: 2px;
+    transition: 0.8s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+}
+.fondo_guep {
+    background-image: url('../img/fonodo-landing.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.titulo_guep {
+    font-family: 'Covered By Your Grace';
+    font-size: 45px;
+}
+.texto_guep {
+    font-weight: bold;
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    padding: 7px;
+}
+.titulo {
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px; 
+    text-align: center;
+    font-size: 38px;
+}
+.iconos {
+    transition: all 400ms;
+}
+.iconos:hover {
+    transform: scale(1.08);
+}
+.animado {
+    opacity: 0;
+    transition: all 0.3s;
+}
+.mostrarDerecha {
+    animation: mostrarDerecha 1s;
+} 
+  @keyframes mostrarDerecha {
+      0% {
+          transform: translateX(-120px);
+      }
+      100% {
+          transform: translateX(0px);
+      }
+  }
+  @media(max-width:900px) {
+    .fondo_guep {
+        background-image: url('../img/fonodo-landing-movil.jpg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+  }
